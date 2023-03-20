@@ -32,7 +32,7 @@ public class EmailSenderService {
 		List<User> activeUser = userRepository.findByUserStatus(1);
 		
 		//New Lists of employees having bday in few days ---> 
-		List<String> birthdayUserNameList = new ArrayList()<>();
+		List<String> birthdayUserNameList = new ArrayList<>();
 		List<LocalDate> birthdayUserDobList = new ArrayList<>();
 		List<String> employeeIdList = new ArrayList<>();
 		
