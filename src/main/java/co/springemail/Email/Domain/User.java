@@ -1,6 +1,7 @@
-package co.springemail.EmailService.Domain;
+package co.springemail.Email.Domain;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,10 +10,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.context.annotation.ComponentScan;
 
 @Entity
-@Table(name="employee")
-public class User implements Serializable {
+@Table
+@ComponentScan(basePackages = {"co.springemail,EmailService.Domain"})
+public class User{
 
 	private static final long serialVersionUID = 1L;
 	
@@ -23,6 +26,20 @@ public class User implements Serializable {
 	@Column(name = "id")
 	private Integer id;
 	
+	
+	public User(String userName, String officialEmail, String personalEmail, String contactNo,
+		String gender, LocalDate dob, Integer userStatus, String userRole) {
+	super();
+	this.userName = userName;
+	this.officialEmail = officialEmail;
+	this.personalEmail = personalEmail;
+	this.contactNo = contactNo;
+	this.gender = gender;
+	this.dob = dob;
+	this.userStatus = userStatus;
+	this.userRole = userRole;
+}
+
 	public Integer getId() {
 		return id;
 	}

@@ -16,6 +16,11 @@
 	<name>Email-Service</name>
 	<description>Birthday Reminder Mail Service</description>
 	<properties>
+	<property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+	<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/springemail</property>
+<property name="hibernate.connection.username">root</property>
+<property name="hibernate.connection.password">Mumu1806*</property>
 		<java.version>17</java.version>
 	</properties>
 	
@@ -29,12 +34,13 @@
 			<artifactId>spring-boot-starter-mail</artifactId>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 <dependency>
     <groupId>mysql</groupId>
     <artifactId>mysql-connector-java</artifactId>
-    <version>8.0.29</version>
+    <version>8.0.30</version>
 </dependency>
+
 
 		
 		<!-- https://mvnrepository.com/artifact/javax.persistence/javax.persistence-api -->

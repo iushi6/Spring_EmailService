@@ -1,4 +1,4 @@
-package co.springemail.EmailService;
+package co.springemail.Email;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -7,10 +7,10 @@ import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.scheduling.annotation.Scheduled;
 
-import co.springemail.EmailService.Service.EmailSenderService;
+import co.springemail.Email.Service.EmailSenderService;
 
 @SpringBootApplication
-public class EmailServiceApplication {
+public class EmailApplication {
 	
 	@Autowired
 	public EmailSenderService service;
@@ -20,7 +20,7 @@ public class EmailServiceApplication {
 	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(EmailServiceApplication.class, args);
+		SpringApplication.run(EmailApplication.class, args);
 	}
 
 	@Scheduled(cron = "* 10 12 * * *")

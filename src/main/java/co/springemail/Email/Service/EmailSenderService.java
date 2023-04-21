@@ -1,4 +1,4 @@
-package co.springemail.EmailService.Service;
+package co.springemail.Email.Service;
 
 import java.time.LocalDate;
 import java.time.Period;
@@ -12,8 +12,8 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Service;
 
-import co.springemail.EmailService.Domain.User;
-import co.springemail.EmailService.Repository.UserRepository;
+import co.springemail.Email.Domain.User;
+import co.springemail.Email.Repository.UserRepository;
 
 @Service
 public class EmailSenderService {
