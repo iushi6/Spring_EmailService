@@ -55,7 +55,6 @@ public class EmailSenderService {
 					if(difference.getMonths()==0) {
 						birthdayUserNameList.add(user.getUserName());
 						birthdayUserDobList.add(userDob2);
-						employeeIdList.add(user.getLoginId());
 					}else {
 						continue;
 					}
@@ -71,7 +70,7 @@ public class EmailSenderService {
 		//To see in Console using Logger --->
 		log.info("birthdayUSerNameList is {}",birthdayUserNameList);
 		log.info("birthdayUserDobList is {}",birthdayUserDobList);
-		log.info("EmployeeIdList is {}",employeeIdList);
+		
 		log.info("MissingDobList is {}",missingDobList);
 		
 		//Content to sent in Mail --->
@@ -93,4 +92,7 @@ public class EmailSenderService {
 		
 		System.out.println("Email has been Sent !.....");
 	}
+
+
+
 }

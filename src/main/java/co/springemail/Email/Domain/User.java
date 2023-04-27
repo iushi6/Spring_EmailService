@@ -3,19 +3,15 @@ package co.springemail.Email.Domain;
 import java.io.Serializable;
 import java.time.LocalDate;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+import jakarta.persistence.*;
 
 @Entity
 @Table
-@ComponentScan(basePackages = {"co.springemail,EmailService.Domain"})
-public class User{
+@EntityScan
+public class User implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
@@ -27,6 +23,11 @@ public class User{
 	private Integer id;
 	
 	
+	
+	public User() {
+	super();
+}
+
 	public User(String userName, String officialEmail, String personalEmail, String contactNo,
 		String gender, LocalDate dob, Integer userStatus, String userRole) {
 	super();
@@ -48,13 +49,6 @@ public class User{
 		this.id = id;
 	}
 
-	public String getLoginId() {
-		return loginId;
-	}
-
-	public void setLoginId(String loginId) {
-		this.loginId = loginId;
-	}
 
 	public String getUserName() {
 		return userName;
@@ -119,9 +113,6 @@ public class User{
 	public void setUserRole(String userRole) {
 		this.userRole = userRole;
 	}
-
-	@Column(name = "login_id")
-	private String loginId;
 	
 	@Column(name = "user_name")
 	private String userName;
@@ -138,7 +129,7 @@ public class User{
     @Column(name = "gender")
     private String gender;
 
-    @Column(nullable = true, name = "dob")
+    @Column(name = "dob")
     private java.time.LocalDate dob;
 
     @Column(name = "user_status")
