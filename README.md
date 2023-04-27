@@ -1,6 +1,8 @@
 # Spring_EmailService
 Birthday Reminder Mail Service 
-
+=====================================================================================
+NOTE: Please use "asaxena_final_service" branch to find out the final optimized code.
+=====================================================================================
 
 INTRODUCTION: 
 --------------------------------------------------------------------------------
