@@ -19,11 +19,12 @@ SYSTEM REQUIREMENTS:
 JAVA JDK Version - 11 or higher
 Spring Boot Version - 7.9.3
 PostMan APK
+Camunda 8
 
 2.Tools Used:
 
 Eclipse IDE
-Gmail Accoun
+Gmail Account
 
 3.Technologies Used:
 
@@ -32,3 +33,4 @@ Spring Framework
 Mysql DB
 Spring MVC Architecture
 REST API
+Camunda Modeler
